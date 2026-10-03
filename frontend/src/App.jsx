@@ -1,7 +1,13 @@
+import { postulaciones } from "./data/postulaciones";
+import TablaPostulaciones from "./components/TablaPostulaciones";
+
 function App() {
   return (
-    <h1>Tracker de postulaciones</h1>
-  )
+    <main>
+      <h1>Mis postulaciones</h1>
+      <TablaPostulaciones postulaciones={postulaciones} />
+    </main>
+  );
 }
 
-export default App
+export default App;

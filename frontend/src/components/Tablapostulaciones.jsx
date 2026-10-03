@@ -1,4 +1,4 @@
-function Tablapostulaciones ({postulaciones}) {
+function TablaPostulaciones ({postulaciones}) {
     return (
         <table>
             <thead>
@@ -23,4 +23,4 @@ function Tablapostulaciones ({postulaciones}) {
     );
 }
 
-export default Tablapostulaciones;
+export default TablaPostulaciones;
