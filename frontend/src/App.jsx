@@ -1,6 +1,6 @@
 import { postulaciones as postulacionesIniciales} from "./data/postulaciones";
 import FormularioPostulaciones from "./components/FormularioPostulaciones";
-import TablaPostulaciones from "./components/TablaPostulaciones";
+import TablaPostulaciones from "./components/Tablapostulaciones";
 import { useState } from "react";
 
 

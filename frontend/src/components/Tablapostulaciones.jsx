@@ -7,6 +7,7 @@ function TablaPostulaciones ({postulaciones}) {
                     <th>Cargo</th>
                     <th>Estado</th>
                     <th>Fecha</th>
+                    <th>Contacto</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,6 +17,7 @@ function TablaPostulaciones ({postulaciones}) {
                         <td>{p.cargo}</td>
                         <td>{p.estado}</td>
                         <td>{p.fecha}</td>
+                        <td>{p.contacto}</td>
                     </tr>
                 ))}
             </tbody>
