@@ -1,4 +1,5 @@
-function TablaPostulaciones ({postulaciones}) {
+function TablaPostulaciones ({ postulaciones, onEliminar })
+{
     return (
         <table>
             <thead>
@@ -18,6 +19,9 @@ function TablaPostulaciones ({postulaciones}) {
                         <td>{p.estado}</td>
                         <td>{p.fecha}</td>
                         <td>{p.contacto}</td>
+                        <td>
+                            <button onClick={() => onEliminar(p.id)}>Eliminar</button>
+                        </td>
                     </tr>
                 ))}
             </tbody>

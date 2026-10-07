@@ -9,13 +9,17 @@ function App() {
 
 function agregarPostulaciones(nueva) {
   setPostulaciones([...postulaciones, nueva])
-}
+};
+
+function eliminarPostulaciones(id) {
+  setPostulaciones(postulaciones.filter(e => e.id !== id));
+};
 
   return (
     <main>
       <h1>Postulaciones</h1>
       <FormularioPostulaciones agregarPostulaciones={agregarPostulaciones}/>
-      <TablaPostulaciones postulaciones={postulaciones} />
+      <TablaPostulaciones postulaciones={postulaciones} onEliminar={eliminarPostulaciones}/>
     </main>
   );
 }
