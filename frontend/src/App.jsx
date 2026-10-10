@@ -1,11 +1,23 @@
 import { postulaciones as postulacionesIniciales} from "./data/postulaciones";
 import FormularioPostulaciones from "./components/FormularioPostulaciones";
 import TablaPostulaciones from "./components/Tablapostulaciones";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function App() {
-  const [postulaciones, setPostulaciones] = useState(postulacionesIniciales);
+
+const [postulaciones, setPostulaciones] = useState(() => {
+  const guardado = localStorage.getItem("postulaciones");
+  if(guardado) {
+    return JSON.parse(guardado);
+  }
+  return PostulacionesIniciales;
+});
+
+useEffect (() => {
+  localStorage.setItem("postulaciones", JSON.stringify(postulaciones))
+}, [postulaciones])
+
 
 function agregarPostulaciones(nueva) {
   setPostulaciones([...postulaciones, nueva])
